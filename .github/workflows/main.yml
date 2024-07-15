@@ -30,18 +30,3 @@ jobs:
 
       - name: Bootstrap CDK
         run: npx cdk bootstrap
-
-      - name: Deploy CDK Stack
-        run: npx cdk deploy --require-approval never
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
-
-      - name: Clean up after deployment
-        run: npx cdk destroy --force
-        if: github.event_name == 'pull_request'
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
