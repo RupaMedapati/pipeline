@@ -20,10 +20,12 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
+    "outDir": "./dist"
     "typeRoots": [
       "./node_modules/@types"
     ]
   },
+  "include": ["./lambda/**/*.ts", "./lib/**/*.ts"]
   "exclude": [
     "node_modules",
     "cdk.out"
