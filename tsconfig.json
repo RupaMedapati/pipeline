@@ -21,7 +21,7 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "outDir": "./dist",
-    "rootDir": "./lambda",
+    "rootDir": "./",
     "typeRoots": [
       "./node_modules/@types"
     ]
