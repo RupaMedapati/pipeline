@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install AWS CDK
+        run: npm install -g aws-cdk
+
       - name: Install dependencies
         run: npm install
         
@@ -32,8 +35,7 @@ jobs:
 
       - name: Compile TypeScript to JavaScript
         run: npm run build
-      - name: Bootstrap CDK
-        run: npx cdk bootstrap
+      
 
       - name: Deploy CDK Stack
         run: npx cdk deploy --require-approval never
