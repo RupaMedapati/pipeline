@@ -21,12 +21,12 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./src",
     "typeRoots": [
       "./node_modules/@types"
     ]
   },
-  "include": ["./lambda/**/*.ts", "./lib/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": [
     "node_modules",
     "cdk.out"
