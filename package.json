@@ -1,6 +1,7 @@
 {
   "name": "samplelambda",
   "version": "0.1.0",
+  "main": "dist/index.js",
   "bin": {
     "samplelambda": "bin/samplelambda.js"
   },
@@ -8,6 +9,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
+    "start": "node dist/index.js",
     "cdk": "cdk"
   },
   "devDependencies": {
