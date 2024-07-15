@@ -32,6 +32,8 @@ jobs:
 
       - name: Compile TypeScript to JavaScript
         run: npm run build
+      - name: Bootstrap CDK
+        run: npx cdk bootstrap
 
       - name: Deploy CDK Stack
         run: npx cdk deploy --require-approval never
