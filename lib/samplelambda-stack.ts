@@ -24,7 +24,7 @@ export class LambdaStack extends cdk.Stack {
     // Create the Lambda function
     const lambdaFunction = new lambda.Function(this, 'ProcessCheckRunEvents', {
       runtime: lambda.Runtime.NODEJS_16_X,
-      code: lambda.Code.fromAsset('lambda'), // This assumes your code is in the lambda directory
+      code: lambda.Code.fromAsset('dist/lambda'), // This assumes your code is in the lambda directory
       handler: 'process-events.handler',
       environment: {
         BUCKET_NAME: bucket.bucketName,
